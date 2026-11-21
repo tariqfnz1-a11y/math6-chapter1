@@ -208,7 +208,7 @@ export function ChapterOpener({ onStartLesson }: ChapterOpenerProps) {
                       setElapsedSec(0);
                     }}
                     className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer whitespace-nowrap shrink-0"
-                  >
+                  style={{ backgroundColor: '#0f172a', color: '#ffffff' }}>
                     <RotateCcw className="h-3.5 w-3.5" aria-hidden="true" />
                     <span>Reset</span>
                   </button>
