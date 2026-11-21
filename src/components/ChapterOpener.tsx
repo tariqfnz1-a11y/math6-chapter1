@@ -11,19 +11,17 @@ export function ChapterOpener({ onStartLesson }: ChapterOpenerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [prediction, setPrediction] = useState<string | null>(null);
 
-  useEffect(() => {
+    useEffect(() => {
     if (!isPlaying) return;
     const timer = window.setInterval(() => {
-      setElapsedSec((prev) => {
-        if (prev >= 360) {
-          setIsPlaying(false);
-          return 360;
-        }
-        return prev + 15;
-      });
+      setElapsedSec((prev) => Math.min(prev + 15, 360));
     }, 180);
     return () => window.clearInterval(timer);
   }, [isPlaying]);
+
+  useEffect(() => {
+    if (elapsedSec >= 360) setIsPlaying(false);
+  }, [elapsedSec]);
 
   const busProgress = (elapsedSec % 180) / 180;
   const trainProgress = (elapsedSec % 360) / 360;
