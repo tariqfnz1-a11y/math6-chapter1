@@ -180,14 +180,15 @@ export function ChapterOpener({ onStartLesson }: ChapterOpenerProps) {
 
               {/* Controls & Live Outcome */}
               <div className="mt-4 flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-200">
-                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2">
                   <button
                     type="button"
                     onClick={() => {
                       if (elapsedSec >= 360) setElapsedSec(0);
                       setIsPlaying((p) => !p);
                     }}
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white hover:bg-slate-800 transition-colors cursor-pointer whitespace-nowrap shrink-0"
+                    className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold cursor-pointer whitespace-nowrap shrink-0"
+                    style={{ backgroundColor: '#0f172a', color: '#ffffff' }}
                   >
                     {isPlaying ? (
                       <>
@@ -207,13 +208,13 @@ export function ChapterOpener({ onStartLesson }: ChapterOpenerProps) {
                       setIsPlaying(false);
                       setElapsedSec(0);
                     }}
-                    className="inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer whitespace-nowrap shrink-0"
-                  style={{ backgroundColor: '#0f172a', color: '#ffffff' }}>
+                    className="inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium cursor-pointer whitespace-nowrap shrink-0"
+                    style={{ backgroundColor: '#ffffff', color: '#334155', border: '1px solid #cbd5e1' }}
+                  >
                     <RotateCcw className="h-3.5 w-3.5" aria-hidden="true" />
                     <span>Reset</span>
                   </button>
                 </div>
-
                 {meetTogether ? (
                   <p className="text-xs font-semibold text-emerald-700">
                     Both arrive together at 360 seconds (6 minutes)!
