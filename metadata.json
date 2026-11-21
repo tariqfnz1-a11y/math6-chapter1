@@ -1,0 +1,8 @@
+{
+  "name": "Maths Class 6 Chapter1",
+  "description": "",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
