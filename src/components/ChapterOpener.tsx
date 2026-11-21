@@ -216,7 +216,7 @@ export function ChapterOpener({ onStartLesson }: ChapterOpenerProps) {
                   </button>
                 </div>
                 {meetTogether ? (
-                  <p className="text-xs font-semibold text-emerald-700">
+                  <p className="text-xs font-semibold" style={{ color: '#047857' }}>
                     Both arrive together at 360 seconds (6 minutes)!
                     {prediction === '360 seconds' ? ' Great prediction!' : ''}
                   </p>
